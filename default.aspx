@@ -1,7 +1,7 @@
 <%@ Page language="C#" Debug="true"%>
 <HTML>
 <HEAD>
-  <TITLE>File Upload</TITLE>
+  <TITLE>PDF File Processing</TITLE>
   <STYLE>
     BODY, TH, TD, INPUT, SELECT, TEXTAREA, PRE { FONT-FAMILY: Tahoma; FONT-SIZE: 8pt }
   </STYLE>
@@ -81,11 +81,11 @@
  onsubmit="return validateForm(this)"
 >
   &nbsp; [PDF] <input type=file name=file1 class=required> &nbsp; &nbsp; <input type=submit>
-  <br><br>
-  x:<input type=text datatype=numeric class=required size=2 name=x value="10">
-  y:<input type=text datatype=numeric class=required size=2 name=y value="395">
-  w:<input type=text datatype=numeric class=required size=2 name=w value="620">
-  h:<input type=text datatype=numeric class=required size=2 name=h value="190">
+  <br><br>Cover-up Area:
+  x=<input type=text datatype=numeric class=required size=2 name=x value="10">
+  y=<input type=text datatype=numeric class=required size=2 name=y value="395">
+  w=<input type=text datatype=numeric class=required size=2 name=w value="620">
+  h=<input type=text datatype=numeric class=required size=2 name=h value="190">
   <br><br>
 </FORM>
 </DIV>
