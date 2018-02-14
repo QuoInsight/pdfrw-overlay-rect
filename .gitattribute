@@ -1,2 +1,2 @@
-*.js linguist-vendored=false
+*.js linguist-vendored
 *.py linguist-language=python
