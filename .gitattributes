@@ -1,3 +1,5 @@
+# https://github.com/github/linguist
+
 *.js linguist-vendored
-*.asp* linguist-vendored
+*.asp* linguist-vendored=true
 *.py linguist-language=Python
