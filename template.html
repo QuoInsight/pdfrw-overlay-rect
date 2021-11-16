@@ -1,0 +1,85 @@
+<html>
+<head>
+  <style>
+    @page {
+      size: A4 landscape; /* 595pt;842pt | 21cm;29.7cm | 8.3in;11.7in; */
+      /* [ https://xhtml2pdf.readthedocs.io/en/latest/format_html.html ] */
+      @frame {
+        -pdf-frame-content: headerId;
+        -pdf-frame-border: 1;    /* for debugging the layout */
+        /* left: 50pt; width: 750pt; top: 50pt; height: 40pt; */
+        position:absolute;top:20pt;height:40pt;
+        left:20pt;right:20pt;margin:0 auto;
+      }
+      @frame content_frame {          /* Content Frame */
+        /* left: 50pt; width: 750pt; top: 90pt; height: 450pt; */
+        position:absolute;top:60pt; left:20pt;right:20pt;margin:0 auto;
+      }
+      @frame {
+        -pdf-frame-content: footerId;
+        -pdf-frame-border: 1;    /* for debugging the layout */
+        /* left: 50pt; width: 750pt; top: 550pt; height: 20pt; */
+        position:absolute;bottom:20pt;height:20pt;
+        left:20pt;right:20pt;margin:0 auto;
+      }
+    }
+    html {
+      height: 100%; margin: 5px; border: 1px solid;
+    }
+    .headerDiv {
+      font-size: 12pt;
+      position:absolute;top:20;height:40pt;width:100%;
+      left:20pt;right:20pt;margin:0 auto;
+    }
+    .footerDiv {
+      color: red; font-size:10pt;
+      position:absolute;bottom:0;height:20pt;width:100%;
+      left:20pt;right:20pt;margin:0 auto;
+    }
+    .barcode39 {
+      /* <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&display=swap" rel="stylesheet"> */
+      xfont-family: 'Libre Barcode 39 Extended Text', cursive;
+      font-family: 'BC 3of9';
+      font-size: 40px;
+    }
+    body {
+      color: blue; font-size: 72pt;
+    }
+  </style>
+</head>
+<body>
+  <div id="headerId" class="headerDiv">header</div>
+  <div id="footerId" class="footerDiv">
+    <center>
+      footer | page <pdf:pagenumber>/<pdf:pagecount>
+    </center>
+  </div>
+  <center>
+    <!--div class="barcode39">*0123456789*</div-->
+    <pdf:barcode barwidth="1.2pt" xbarheight="120pt" value="0123456789" type="code39" humanreadable="1" />
+    <h3>testing</h3>
+    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"></img>
+    <pre>
+Line01
+Line02
+Line03
+Line04
+Line05
+Line06
+Line07
+Line08
+Line09
+Line10
+Line11
+Line12
+Line13
+Line14
+Line15
+Line16
+Line17
+Line18
+Line19
+Line20</pre>
+  </center>
+</body>
+</html>
